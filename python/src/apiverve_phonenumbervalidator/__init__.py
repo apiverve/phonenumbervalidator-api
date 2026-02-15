@@ -1,1 +1,3 @@
-from .apiClient import PhonenumbervalidatorAPIClient
+from .apiClient import PhonenumbervalidatorAPIClient, PhonenumbervalidatorAPIClientError
+
+__all__ = ['PhonenumbervalidatorAPIClient', 'PhonenumbervalidatorAPIClientError']
