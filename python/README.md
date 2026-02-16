@@ -44,7 +44,10 @@ from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClien
 # Initialize the client with your APIVerve API key
 api = PhonenumbervalidatorAPIClient("[YOUR_API_KEY]")
 
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 ```
 
 ###### Simple Request
@@ -132,7 +138,10 @@ from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClien
 
 api = PhonenumbervalidatorAPIClient("[YOUR_API_KEY]")
 
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 
 try:
     result = api.execute(query)
@@ -153,7 +162,10 @@ from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClien
 
 api = PhonenumbervalidatorAPIClient("[YOUR_API_KEY]")
 
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 
 try:
     result = api.execute(query)
@@ -187,7 +199,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClient, PhonenumbervalidatorAPIClientError
 
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 
 # Using context manager ensures proper cleanup
 with PhonenumbervalidatorAPIClient("[YOUR_API_KEY]") as api:
@@ -213,7 +228,10 @@ from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClien
 # Enable debug mode
 api = PhonenumbervalidatorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "number": "816-555-1017", "country": "us" }
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -228,8 +246,12 @@ from apiverve_phonenumbervalidator.apiClient import PhonenumbervalidatorAPIClien
 
 api = PhonenumbervalidatorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "number": "816-555-1017",
+    "country": "us"
+}
+
 try:
-    query = { "number": "816-555-1017", "country": "us" }
     result = api.execute(query)
     print(result)
 finally:
