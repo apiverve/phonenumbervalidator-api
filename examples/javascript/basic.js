@@ -13,7 +13,13 @@ const API_URL = 'https://api.apiverve.com/v1/phonenumbervalidator';
  */
 async function callPhoneNumberValidatorAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            number: &#x27;816-555-1017&#x27;,
+            country: &#x27;us&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
