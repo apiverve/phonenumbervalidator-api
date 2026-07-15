@@ -4,30 +4,48 @@ declare module '@apiverve/phonenumbervalidator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface phonenumbervalidatorResponse {
     status: string;
     error: string | null;
     data: PhoneNumberValidatorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface PhoneNumberValidatorData {
-      country:         string;
-      detectedCountry: string;
-      countrycode:     number;
-      numberNational:  number;
+      country:         null | string;
+      detectedCountry: null | string;
+      countryName:     null | string;
+      countrycode:     number | null;
+      numberNational:  number | null;
       extension:       null;
-      isvalid:         boolean;
-      type:            string;
+      isValid:         boolean | null;
+      isMobile:        boolean | null;
+      isVoip:          boolean | null;
+      isDisposable:    boolean | null;
+      type:            null | string;
       formatted:       Formatted;
+      riskScore:       number | null;
+      riskLevel:       null | string;
   }
   
   interface Formatted {
-      international: string;
-      national:      string;
-      rfc:           string;
-      e164:          string;
+      international: null | string;
+      national:      null | string;
+      rfc:           null | string;
+      e164:          null | string;
   }
 
   export default class phonenumbervalidatorWrapper {
