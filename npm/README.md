@@ -127,17 +127,23 @@ async function makeRequest() {
   "data": {
     "country": "US",
     "detectedCountry": "US",
+    "countryName": "United States",
     "countrycode": 1,
     "numberNational": 8165551017,
     "extension": null,
-    "isvalid": true,
+    "isValid": true,
+    "isMobile": true,
+    "isVoip": false,
+    "isDisposable": false,
     "type": "fixed_line_or_mobile",
     "formatted": {
       "international": "+1 816-555-1017",
       "national": "(816) 555-1017",
       "rfc": "tel:+1-816-555-1017",
       "e164": "+18165551017"
-    }
+    },
+    "riskScore": 0,
+    "riskLevel": "low"
   }
 }
 ```
