@@ -25,6 +25,9 @@ namespace APIVerve.API.PhoneNumberValidator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -35,23 +38,41 @@ namespace APIVerve.API.PhoneNumberValidator
         [JsonProperty("detectedCountry")]
         public string DetectedCountry { get; set; }
 
+        [JsonProperty("countryName")]
+        public string CountryName { get; set; }
+
         [JsonProperty("countrycode")]
-        public long Countrycode { get; set; }
+        public long? Countrycode { get; set; }
 
         [JsonProperty("numberNational")]
-        public long NumberNational { get; set; }
+        public long? NumberNational { get; set; }
 
         [JsonProperty("extension")]
         public object Extension { get; set; }
 
-        [JsonProperty("isvalid")]
-        public bool Isvalid { get; set; }
+        [JsonProperty("isValid")]
+        public bool? IsValid { get; set; }
+
+        [JsonProperty("isMobile")]
+        public bool? IsMobile { get; set; }
+
+        [JsonProperty("isVoip")]
+        public bool? IsVoip { get; set; }
+
+        [JsonProperty("isDisposable")]
+        public bool? IsDisposable { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
 
         [JsonProperty("formatted")]
         public Formatted Formatted { get; set; }
+
+        [JsonProperty("riskScore")]
+        public long? RiskScore { get; set; }
+
+        [JsonProperty("riskLevel")]
+        public string RiskLevel { get; set; }
     }
 
     public partial class Formatted
@@ -67,5 +88,17 @@ namespace APIVerve.API.PhoneNumberValidator
 
         [JsonProperty("e164")]
         public string E164 { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
