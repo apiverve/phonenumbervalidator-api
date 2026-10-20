@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Phone Number Validator
   description: >-
-    Phone Number Validator is a simple tool for validating if a phone number is
-    valid or not. It checks the phone number format and the country code to see
-    if the phone number is valid.
+    Phone Number Validator checks a phone number and country code to determine
+    validity, line type, and country of origin. It flags disposable or VoIP
+    numbers and outputs standardized international, national, RFC3966, and E.164
+    formats.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/phonenumbervalidator:
     get:
-      summary: Validate Phone Number
+      summary: Phone Number Validator
       description: Validate a phone number
       operationId: phonenumbervalidator
       parameters:
