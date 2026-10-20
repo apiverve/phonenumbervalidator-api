@@ -1,13 +1,12 @@
 Phone Number Validator API
 ============
 
-Phone Number Validator is a simple tool for validating if a phone number is valid or not. It checks the phone number format and the country code to see if the phone number is valid.
+Phone Number Validator checks a phone number and country code to determine validity, line type, and country of origin. It flags disposable or VoIP numbers and outputs standardized international, national, RFC3966, and E.164 formats.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Phone Number Validator API](https://phonenumbervalidator.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-phonenumbervalidator.svg)](https://pypi.org/project/apiverve-phonenumbervalidator/)
+
+This is a Python wrapper for the [Phone Number Validator API](https://apiverve.com/marketplace/phonenumbervalidator?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-phonenumbervalidator
 
 ## Configuration
 
-Before using the phonenumbervalidator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Phone Number Validator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Phone Number Validator API documentation is found here: [https://docs.apiverve.com/ref/phonenumbervalidator](https://docs.apiverve.com/ref/phonenumbervalidator?utm_source=pypi&utm_medium=readme).
+The Phone Number Validator API documentation is found here: [https://docs.apiverve.com/ref/phonenumbervalidator](https://docs.apiverve.com/ref/phonenumbervalidator?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -110,17 +109,23 @@ print(result)
   "data": {
     "country": "US",
     "detectedCountry": "US",
+    "countryName": "United States",
     "countrycode": 1,
     "numberNational": 8165551017,
     "extension": null,
-    "isvalid": true,
+    "isValid": true,
+    "isMobile": true,
+    "isVoip": false,
+    "isDisposable": false,
     "type": "fixed_line_or_mobile",
     "formatted": {
       "international": "+1 816-555-1017",
       "national": "(816) 555-1017",
       "rfc": "tel:+1-816-555-1017",
       "e164": "+18165551017"
-    }
+    },
+    "riskScore": 0,
+    "riskLevel": "low"
   }
 }
 ```
@@ -263,7 +268,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -274,12 +279,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
