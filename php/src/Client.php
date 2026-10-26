@@ -35,7 +35,7 @@ class Client
      */
     private const VALIDATION_RULES = [
         'number' => ['type' => 'string', 'required' => true],
-        'country' => ['type' => 'string', 'required' => true, 'minLength' => 2, 'maxLength' => 2]
+        'country' => ['type' => 'string', 'required' => false, 'minLength' => 2, 'maxLength' => 2]
     ];
 
     /**
