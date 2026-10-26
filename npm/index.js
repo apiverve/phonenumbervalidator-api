@@ -30,7 +30,7 @@ class phonenumbervalidatorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/phonenumbervalidator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"number":{"type":"string","required":true},"country":{"type":"string","required":true,"minLength":2,"maxLength":2}};
+        this.validationRules = {"number":{"type":"string","required":true},"country":{"type":"string","required":false,"minLength":2,"maxLength":2}};
     }
 
     /**

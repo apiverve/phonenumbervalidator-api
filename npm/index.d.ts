@@ -25,20 +25,25 @@ declare module '@apiverve/phonenumbervalidator' {
 
 
   interface PhoneNumberValidatorData {
-      country:         null | string;
-      detectedCountry: null | string;
-      countryName:     null | string;
-      countrycode:     number | null;
-      numberNational:  number | null;
-      extension:       null;
-      isValid:         boolean | null;
-      isMobile:        boolean | null;
-      isVoip:          boolean | null;
-      isDisposable:    boolean | null;
-      type:            null | string;
-      formatted:       Formatted;
-      riskScore:       number | null;
-      riskLevel:       null | string;
+      country:                   null | string;
+      detectedCountry:           null | string;
+      countryName:               null | string;
+      countrycode:               number | null;
+      numberNational:            number | null;
+      extension:                 null;
+      isValid:                   boolean | null;
+      isMobile:                  boolean | null;
+      isVoip:                    boolean | null;
+      isDisposable:              boolean | null;
+      type:                      null | string;
+      isValidNumber:             boolean | null;
+      nationalSignificantNumber: null | string;
+      location:                  null | string;
+      carrier:                   null;
+      timezones:                 (null | string)[];
+      formatted:                 Formatted;
+      riskScore:                 number | null;
+      riskLevel:                 null | string;
   }
   
   interface Formatted {
