@@ -65,6 +65,21 @@ namespace APIVerve.API.PhoneNumberValidator
         [JsonProperty("type")]
         public string Type { get; set; }
 
+        [JsonProperty("isValidNumber")]
+        public bool? IsValidNumber { get; set; }
+
+        [JsonProperty("nationalSignificantNumber")]
+        public string NationalSignificantNumber { get; set; }
+
+        [JsonProperty("location")]
+        public string Location { get; set; }
+
+        [JsonProperty("carrier")]
+        public object Carrier { get; set; }
+
+        [JsonProperty("timezones")]
+        public string[] Timezones { get; set; }
+
         [JsonProperty("formatted")]
         public Formatted Formatted { get; set; }
 

@@ -68,7 +68,7 @@ namespace APIVerve.API.PhoneNumberValidator
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "number", new ValidationRule { Type = "string", Required = true } },
-            { "country", new ValidationRule { Type = "string", Required = true, MinLength = 2, MaxLength = 2 } }
+            { "country", new ValidationRule { Type = "string", Required = false, MinLength = 2, MaxLength = 2 } }
         };
 
         /// <summary>Format validation patterns</summary>
