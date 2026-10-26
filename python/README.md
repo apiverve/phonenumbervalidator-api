@@ -1,7 +1,7 @@
 Phone Number Validator API
 ============
 
-Phone Number Validator checks a phone number and country code to determine validity, line type, and country of origin. It flags disposable or VoIP numbers and outputs standardized international, national, RFC3966, and E.164 formats.
+Phone Number Validator checks a phone number and returns whether it is valid, its line type, country, area and time zone, and the carrier its mobile range was allocated to. It flags disposable and VoIP numbers and outputs E.164, international, national and RFC3966 formats.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-phonenumbervalidator.svg)](https://pypi.org/project/apiverve-phonenumbervalidator/)
@@ -118,6 +118,13 @@ print(result)
     "isVoip": false,
     "isDisposable": false,
     "type": "fixed_line_or_mobile",
+    "isValidNumber": true,
+    "nationalSignificantNumber": "8165551017",
+    "location": "Missouri",
+    "carrier": null,
+    "timezones": [
+      "America/Chicago"
+    ],
     "formatted": {
       "international": "+1 816-555-1017",
       "national": "(816) 555-1017",

@@ -25,7 +25,7 @@ class PhonenumbervalidatorAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "number": {"type": "string", "required": True},
-        "country": {"type": "string", "required": True, "minLength": 2, "maxLength": 2}
+        "country": {"type": "string", "required": False, "minLength": 2, "maxLength": 2}
     }
 
     # Format validation patterns

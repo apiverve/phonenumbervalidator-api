@@ -10,11 +10,11 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_phonenumbervalidator',
-    version='1.2.2',
+    version='1.2.3',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Phone Number Validator checks a phone number and country code to determine validity, line type, and country of origin. It flags disposable or VoIP numbers and outputs standardized international, national, RFC3966, and E.164 formats.',
+    description='Phone Number Validator checks a phone number and returns whether it is valid, its line type, country, area and time zone, and the carrier its mobile range was allocated to. It flags disposable and VoIP numbers and outputs E.164, international, national and RFC3966 formats.',
     author='APIVerve',
     author_email='hello@apiverve.com',
     url='https://apiverve.com/marketplace/phonenumbervalidator?utm_source=pypi&utm_medium=referral&utm_content=homepage',
