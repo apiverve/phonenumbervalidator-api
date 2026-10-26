@@ -2,10 +2,10 @@ openapi: 3.0.4
 info:
   title: Phone Number Validator
   description: >-
-    Phone Number Validator checks a phone number and country code to determine
-    validity, line type, and country of origin. It flags disposable or VoIP
-    numbers and outputs standardized international, national, RFC3966, and E.164
-    formats.
+    Phone Number Validator checks a phone number and returns whether it is
+    valid, its line type, country, area and time zone, and the carrier its
+    mobile range was allocated to. It flags disposable and VoIP numbers and
+    outputs E.164, international, national and RFC3966 formats.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -35,8 +35,10 @@ paths:
           in: query
           schema:
             type: string
-          required: true
-          description: The country code of the phone number (e.g., us, uk)
+          required: false
+          description: >-
+            The two-letter country code of the phone number (e.g., us, uk).
+            Optional when the number is in international format starting with +
           example: us
       responses:
         '200':
@@ -70,6 +72,12 @@ paths:
                   isVoip: false
                   isDisposable: false
                   type: fixed_line_or_mobile
+                  isValidNumber: true
+                  nationalSignificantNumber: '8165551017'
+                  location: Missouri
+                  carrier: null
+                  timezones:
+                    - America/Chicago
                   formatted:
                     international: +1 816-555-1017
                     national: (816) 555-1017
