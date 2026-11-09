@@ -4,6 +4,6 @@ require_relative "apiverve_phonenumbervalidator/client"
 
 module APIVerve
   module Phonenumbervalidator
-    VERSION = "1.2.4"
+    VERSION = "1.2.5"
   end
 end
