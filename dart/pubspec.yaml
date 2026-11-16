@@ -1,0 +1,16 @@
+name: apiverve_phonenumbervalidator
+description: "Phone Number Validator checks a phone number and returns whether it is valid, its line type, country, area and time zone, and the carrier its mobile range was allocated to. It flags disposable and VoIP numbers and outputs E.164, international, national and RFC3966 formats."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/phonenumbervalidator?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/phonenumbervalidator-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
